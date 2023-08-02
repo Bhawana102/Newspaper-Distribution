@@ -1,0 +1,72 @@
+manually open databse and login just to creae new table.
+not while running eclipse main.java
+
+in table view.. diff datatypes mean sto take arraylist.array.aslist. in observable list obj,
+else just addall
+
+button disable command'
+
+URL url;
+Media media;
+MediaPlayer m;
+AudioClip a;
+void playsound()
+{
+url=getClass().getResource("");
+media=new Media(url.toString());
+m=new MediaPlayer(media);
+m.play();
+}
+ 
+//====
+@FXML
+void doExport (ActionEvent event)
+{
+try {
+writeExcel();
+txtPname.setText("sdfgvb");
+sysout("done");
+}
+catch (Exception e)
+{ e.printStackTrace();
+}
+}
+ObservableList<ProductBean> list;
+
+public void writeExcel() throws Exception {
+Writer writer = null;
+try{
+File file= new File("Users.csv");
+writer = new BufferedWriter(new FileWriter(file));
+String text="opid,pnmae,price,dop"
+writer.write(text)
+for(productBean p : list)
+{text= p.getpid()+p.getPname+p.getPrice()+p.getdop;
+writer.write(text);
+}
+catch (Exception e)
+{e.printStackTarace();
+}
+finally(
+writer.flush();
+writer.close();
+}
+====
+}
+writeExcel();
+txtPname.setText("Exported to excel..");
+System.out.println("Exported");
+} catch (Exception e) {
+// TODO Auto-generated catch block
+e.printStackTrace();
+try {
+File file = new File("Users.csv");
+writer = new BufferedWriter(new FileWriter(file));
+String text="pid, pname, price, dop\n"; //works as seperator
+writer.write(text);
+for (ProductBean p : list)
+{
+text = n getPid() + " " + n getPname()+
+11
++ n getPrice() + " " +
+In getDon()+"\n".

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="500" maxWidth="500" minHeight="500" minWidth="500" prefHeight="400.0" prefWidth="470.0" style="-fx-background-color: #F3DFC1" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="papermaster.papermasterViewController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="11.0" prefHeight="10.0" prefWidth="500.0" text="PAPER MASTER">
+         <font>
+            <Font name="Times New Roman Bold" size="28.0" />
+         </font>
+      </Label>
+      <Separator layoutY="46.0" prefHeight="9.0" prefWidth="500.0" />
+      <Label layoutX="39.0" layoutY="79.0" text="PAPER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbPaper" editable="true" layoutX="39.0" layoutY="108.0" prefWidth="150.0" />
+      <Button layoutX="236.0" layoutY="105.0" mnemonicParsing="false" onAction="#doSearch" text="Search">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="50.0" fitWidth="51.0" pickOnBounds="false" preserveRatio="true">
+         <image>
+            <Image url="@iconsleftright.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="39.0" layoutY="175.0" prefHeight="22.0" prefWidth="43.0" text="PRICE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPrice" layoutX="39.0" layoutY="200.0" />
+      <Button layoutX="220.0" layoutY="269.0" mnemonicParsing="false" onAction="#doWithdraw" text="WITHDRAW">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="134.0" layoutY="269.0" mnemonicParsing="false" onAction="#doEdit" text="EDIT">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="40.0" layoutY="269.0" mnemonicParsing="false" onAction="#doAvail" text="AVAIL">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="350.0" layoutY="269.0" mnemonicParsing="false" onAction="#doNew" text="NEW">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="50.0" fitWidth="51.0" layoutX="449.0" pickOnBounds="false" preserveRatio="true">
+         <image>
+            <Image url="@iconsleftright.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="175.0" fitWidth="176.0" layoutX="305.0" layoutY="79.0" opacity="1" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@news.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

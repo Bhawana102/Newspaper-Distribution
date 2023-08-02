@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560" prefWidth="500.0" style="-fx-background-color: #F3DFC1;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="billmanager.billViewController">
+   <children>
+      <Label alignment="CENTER" layoutX="-1.0" layoutY="12.0" prefHeight="31.0" prefWidth="500.0" text="BILL GENERATOR">
+         <font>
+            <Font name="Times New Roman Bold" size="28.0" />
+         </font>
+      </Label>
+      <Separator layoutY="50.0" prefHeight="5.0" prefWidth="500.0" />
+      <Label layoutX="71.0" layoutY="83.0" text="CUSTOMER ID">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCustomer" editable="true" layoutX="71.0" layoutY="107.0" onAction="#doFetchCustomer" prefWidth="150.0" />
+      <Button layoutX="284.0" layoutY="92.0" mnemonicParsing="false" onAction="#doLastBillingDate" text="LAST BILLING DATE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="71.0" layoutY="149.0" text="PAPERS">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="73.0" layoutY="217.0" text="PRICES">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPaper" layoutX="72.0" layoutY="171.0" prefHeight="26.0" prefWidth="350.0" />
+      <TextField fx:id="txtPrice" layoutX="72.0" layoutY="239.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label layoutX="280.0" layoutY="215.0" text="TOTAL AMOUNT">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAmount" layoutX="279.0" layoutY="237.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label layoutX="72.0" layoutY="277.0" text="LAST BILLING DATE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="280.0" layoutY="277.0" text="BILL UPTO">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dpBillUpto" layoutX="281.0" layoutY="300.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label layoutX="72.0" layoutY="343.0" text="MISSING DAYS">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMissing" layoutX="71.0" layoutY="365.0" prefHeight="26.0" prefWidth="150.0" />
+      <Button fx:id="btnGen" layoutX="190.0" layoutY="416.0" mnemonicParsing="false" onAction="#doGenBill" text="GENERATE BILL">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="72.0" layoutY="466.0" text="PAYABLE AMOUNT">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPayable" layoutX="208.0" layoutY="463.0" prefHeight="26.0" prefWidth="150.0" />
+      <ImageView fitHeight="71.0" fitWidth="61.0" layoutX="2.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@bill.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="71.0" fitWidth="51.0" layoutX="447.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@news.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtLastDate" layoutX="72.0" layoutY="300.0" prefHeight="26.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

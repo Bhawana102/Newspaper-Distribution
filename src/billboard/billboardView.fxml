@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="669.0" style="-fx-background-color: #F3DFC1;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="billboard.billboardViewController">
+   <children>
+      <Button layoutX="192.0" layoutY="68.0" mnemonicParsing="false" onAction="#doPaidPend" text="PAID/PENDING" />
+      <Label alignment="CENTER" layoutY="14.0" prefHeight="31.0" prefWidth="669.0" text="BILL BOARD">
+         <font>
+            <Font name="Times New Roman Bold" size="28.0" />
+         </font>
+      </Label>
+      <Button layoutX="564.0" layoutY="129.0" mnemonicParsing="false" onAction="#doSearch" text="SEARCH" />
+      <Button layoutX="536.0" layoutY="68.0" mnemonicParsing="false" onAction="#doMobileBill" text="BILL HISTORY" />
+      <TableView fx:id="tableData" layoutX="45.0" layoutY="176.0" prefHeight="178.0" prefWidth="576.0" />
+      <Separator layoutX="304.0" layoutY="59.0" orientation="VERTICAL" prefHeight="42.0" prefWidth="5.0" />
+      <RadioButton fx:id="rdPaid" layoutX="23.0" layoutY="70.0" mnemonicParsing="false" text="PAID">
+         <toggleGroup>
+            <ToggleGroup fx:id="hello" />
+         </toggleGroup>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="rdPend" layoutX="93.0" layoutY="70.0" mnemonicParsing="false" text="PENDING" toggleGroup="$hello">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <Label layoutX="312.0" layoutY="69.0" text="MOBILE NO.">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMobile" layoutX="404.0" layoutY="67.0" prefHeight="26.0" prefWidth="118.0" />
+      <Label layoutX="324.0" layoutY="128.0" text="DATE TO">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="57.0" layoutY="128.0" text="DATE FROM">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="90.0" layoutY="105.0" prefHeight="3.0" prefWidth="497.0" />
+      <Button layoutX="81.0" layoutY="380.0" mnemonicParsing="false" onAction="#doPrint" text="EXPORT TO EXCEL &amp; PRINT">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Label layoutX="298.0" layoutY="385.0" text="TOTAL AMOUNT(AS IN TABLE)">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAmount" layoutX="498.0" layoutY="381.0" prefHeight="26.0" prefWidth="98.0">
+         <font>
+            <Font size="13.0" />
+         </font></TextField>
+      <DatePicker fx:id="dpFrom" layoutX="151.0" layoutY="126.0" prefHeight="26.0" prefWidth="127.0" />
+      <DatePicker fx:id="dpTo" layoutX="396.0" layoutY="125.0" prefHeight="26.0" prefWidth="127.0" />
+      <Separator layoutX="-1.0" layoutY="53.0" prefHeight="3.0" prefWidth="669.0" />
+   </children>
+</AnchorPane>
